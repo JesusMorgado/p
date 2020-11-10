@@ -1,0 +1,304 @@
+
+/* 16xp  ----->    100%
+   10px  ----->    X?
+______________________
+X= 10px * 100% / 16px */
+
+
+
+/*#letreroEncabezado{
+    color: red;
+    font-size: 10px;
+}
+
+.Encabezado{  
+    color: orange;
+    font-size: 30px;
+}
+*/
+/*header{
+    color: red;
+}*/
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, 
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;  /*16xp*/
+    line-height: 2;
+}
+
+/** Utilidades **/
+.fw-300{
+    font-weight: 300;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+.d-block{
+    display: block!important;
+}
+
+/*Globales*/
+img{
+    max-width: 100%;
+}
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contenedor{
+    max-width: 120rem;  /*1200px */
+    margin: 0 auto; /* Centrar contenido */
+}
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+
+/* Header */
+.site-header.inicio{ /* Esilos a las dos clases */
+    background: url(../img/header.jpg);
+    height: 100vh; /*  La imagen ocupe el 100% del dispositivo que se vea */
+    min-height: 60rem;  /* 600px*/
+    background-position: center center; /* Pone la imagen desde el centro hacia afuera */
+    background-size: cover; /* Fuerza a la imagen a utilizar el espacio disponible guardando proporcionalidad */
+}
+
+.contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;  
+}
+
+.navegacion a{
+    color: #ffffff;
+    text-decoration: none; /* Elimina la raya del texto */
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+
+.navegacion a:last-of-type{ /* Selector que selecciona el ultimo hijo */
+    margin: 0;
+}
+
+.navegacion a:hover{
+    color: #71b100;
+}
+.contenido-header h1{
+    color: white;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2;
+}
+
+/*** Nosotros **/
+
+.iconos-nosotros{
+    display: flex;  /* Alinea el texto o contenido en un renglon*/
+    justify-content: space-between;
+    text-align: center; 
+}
+.icono{
+    flex-basis: calc(33.3% - 1rem); /* Estableciendo una base de tamaño*/
+}
+.icono h3{
+    text-transform: uppercase; /*Para transformar todo el texto en mayusculas*/
+}
+
+/** Anuncios **/
+.contenedor-anuncios{
+    display: flex;
+    justify-content: space-between;
+}
+.anuncio{
+    flex-basis: calc(33.3% - 1rem);
+    border: 1px solid  #b5b5b5;
+    background-color: #f5f5f5;
+    /* border-color: #b5b5b5;
+    border-width: 1px; */
+    /* border-style: double; */
+    
+}
+.contenido-anuncio{
+    padding: 1rem 2rem;
+}
+.contenido-anuncio h3, 
+.contenido-anuncio p{
+    margin: 0;
+}
+
+.precio{
+    color: #71b100;
+    font-weight: 700;
+}
+
+.boton{
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.boton-amarillo{
+    background-color: #e08709;
+}
+
+.boton-verde{
+    background-color: #71b100;
+}
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+    /* text-align: right; */
+}
+
+/** Contacto home **/
+
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg); /*para insertar una imagen en los estilos de css */
+    height: 40rem;
+    background-position: center center;
+    background-size: cover; /* para colocar la imagen un 100% */
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto{
+    flex: 1;  /* Factor de crecimiento  */
+    color: #ffffff;
+}
+
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+
+/** Blog y Testimoniales  */
+
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.seccion-inferior .blog{
+    flex-basis: 60%;
+
+}
+
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.entrada-blog:last-of-type{
+    margin: 0;
+}
+
+.entrada-blog .imagen{
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 2rem);
+}
+
+.texto-entrada h4{
+    margin: 0;
+}
+
+.texto-entrada a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.texto-entrada h4::after{  /*PSEUDOELEMENTOS son elementos virtuales, es decir,  */
+    content: '';  /* no los puedes seleccionar y no se ven en el codigo fuente */
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71b100;
+    margin-top: 1rem;
+}
+
+.texto-entrada span{
+    color: #e08709;
+}
+
+/** Testimonial */
+
+.testimonial{
+    background-color: #71b100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 2rem;
+}
+
+.testimonial p{
+    text-align: right;
+}
+
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    /* display: block; */
+    position: absolute;    /* 2. Posicionar de forma fija */
+    left: -2rem;
+}
+
+.testimonial blockquote{   /* 1. Especificar posicion relativa */
+    position: relative;
+    padding-left: 5rem;
+}
+
+/** Footer */
+.site-footer{
+    background-color: #333333;
+}
+
+.copyright{
+    margin: 0;
+    color: #ffffff;
+}
+
+.contenedor-footer{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
